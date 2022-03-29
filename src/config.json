@@ -1,0 +1,31 @@
+{
+    "logoURL": "./svg/eye-solid.svg",
+    "BASE_URL": "http://localhost:5000",
+    "buttonConfig": [
+        {
+            "img": "./svg/barcode-solid-violet.svg",
+            "href": "/",
+            "size": 40
+        },
+        {
+            "img": "./svg/desktop-solid.svg",
+            "href": "/mapcam",
+            "size": 55
+        },
+        {
+            "img": "./svg/map-marked-alt-solid.svg",
+            "href": "/page2.html",
+            "size": 55
+        },
+        {
+            "img": "./svg/tasks-solid.svg",
+            "href": "/page3.html",
+            "size": 55
+        },
+        {
+            "img": "./svg/tachometer-alt-solid (1).svg",
+            "href": "/page4.html",
+            "size": 55
+        }
+    ]
+}

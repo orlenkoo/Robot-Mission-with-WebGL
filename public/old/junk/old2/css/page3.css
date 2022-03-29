@@ -1,0 +1,431 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto|Roboto+Mono&display=swap');
+
+body {
+  background-color: rgb(23, 30, 36);
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto', sans-serif;
+}
+
+.container-wrapper{
+  margin: 0;
+  overflow: hidden;
+  padding: 2rem;
+  display: grid;
+  grid-template-columns: repeat(16, 1fr);
+  grid-auto-rows: minmax(18vh, auto);
+  grid-gap: 2rem;
+  grid-template-areas:
+  "column-1 column-1 createMission createMission createMission createMission createMission createMission createMission missionConfigure missionConfigure missionConfigure missionConfigure missionConfigure missionConfigure missionConfigure"
+  "column-1 column-1 createMission createMission createMission createMission createMission createMission createMission missionConfigure missionConfigure missionConfigure missionConfigure missionConfigure missionConfigure missionConfigure"
+  "column-1 column-1 createMission createMission createMission createMission createMission createMission createMission missionConfigure missionConfigure missionConfigure missionConfigure missionConfigure missionConfigure missionConfigure"
+  "column-1 column-1 missionOrdering missionOrdering missionOrdering missionOrdering missionOrdering missionOrdering missionOrdering storedMissions storedMissions storedMissions storedMissions storedMissions storedMissions storedMissions"
+  "column-1 column-1 missionOrdering missionOrdering missionOrdering missionOrdering missionOrdering missionOrdering missionOrdering storedMissions storedMissions storedMissions storedMissions storedMissions storedMissions storedMissions"
+}
+
+.create-mission{
+  grid-area: createMission;
+}
+
+.mission-configure{
+  grid-area: missionConfigure;
+}
+
+.mission-ordering{
+  grid-area: missionOrdering
+}
+
+.stored-missions{
+  grid-area: storedMissions;
+}
+
+/* ------------------------------------------------------------------------------------ */
+
+.create-mission .heading .heading-container .title-container, .mission-configure .heading .heading-container .title-container, .mission-ordering .heading .heading-container .title-container, .stored-missions .heading .heading-container .title-container {
+  margin-top: 2rem;
+  margin-left: 1.7rem;
+}
+
+/* ------------------------------------------------------------------------------------ */
+.create-mission-form {
+  position: relative;
+  height: 70%;
+}
+
+#mission-name {
+  position: absolute;
+  top: 5%;
+  left: 5%;
+  width: 90%;
+  text-align: left;
+}
+
+#description {
+  position: absolute;
+  top: 30%;
+  left: 5%;
+  width: 90%;
+  text-align: left;
+}
+
+#building-name {  
+  position: absolute;
+  top: 55%;
+  left: 5%;
+  width: 90%;
+  text-align: left;
+}
+
+#map-name {
+  position: absolute;
+  top: 80%;
+  left: 5%;
+  width: 90%;
+  text-align: left;
+}
+
+#mission-name label, #description label, #building-name label, #map-name label {
+  color: #fff;
+  font-size: 1rem;
+  margin-top: 0.4rem;
+  width: auto;
+}
+
+#mission-name input, #description input, #building-name select, #map-name select {
+  width: 100%;
+  position: relative;
+  top: 20%;
+  margin-top: 0.4rem;
+  height: 1.8rem;
+  background: none;
+  border-radius: 5px;
+  border: 1px solid #fff;
+  color: #fff;
+}
+
+select {
+  -webkit-appearance: menulist-button;
+  height: 1.8rem;
+}
+
+select>option{ 
+  height:1.8rem;
+}
+
+select {
+  font: inherit;
+}
+
+select:focus {
+  height: 19.8rem;
+} 
+
+#button-heading-container {
+  margin: 0;
+  height: 3rem;
+}
+
+#button-heading-container .title-container {
+  margin-top: 1.4rem;
+  margin-left: 15px;
+}
+
+#heading-page3 #button-heading-container {
+  margin-left: 80%;
+}
+/* ------------------------------------------------------------------------------------ */
+
+
+.configuration {
+  height:  23rem;
+  overflow-y: scroll;
+}
+
+#style-1::-webkit-scrollbar {
+  width: 6px;
+  background-color: #F5F5F5;
+} 
+
+#style-1::-webkit-scrollbar-thumb {
+  background-color: #000000;
+}
+
+#style-1::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+  background-color: #F5F5F5;
+}
+
+
+.configuration h2 {
+ color: 	#B8B8B8;
+ text-align: left;
+ font-size: 1.1rem;
+ padding: 5px 10px;
+ border: 1px solid	#B8B8B8;
+ margin: 10px auto;
+ width: 80%;
+ height: 1.3rem;
+ border-radius: 5px;
+}
+
+.config-footer {
+  
+}
+
+.config-footer h2 {
+  color: #fff;
+  font-size: 1.4rem;
+  text-align: left;
+  margin: 10px 10px;
+  padding: 5px 15px;
+  padding-top: 20px;
+  border-top: 2px solid white;
+}
+
+.config-footer div button {
+  width: 6rem;
+  height: 2.5rem;
+  border: none;
+  color: #fff;
+  background-color: rgb(76, 86, 95);
+  margin: 5px 15px;
+  padding: 5px 10px;
+  border-radius: 20px;
+  font-size: 1rem;
+}
+
+
+
+/* ------------------------------------------------------------------------------------ */
+
+
+.mission-ordering #flex-div {
+  display: flex;
+  justify-content: space-between;
+}
+
+#flex-div {
+  background-color: #fff;
+  border: none;
+  border-radius: 20px;
+  width: 85%;
+  margin: 15px auto;
+}
+
+#flex-div h2 {
+  margin: 5px 10px;
+  padding: 5p 10px;
+  color: 	#606060;
+  margin-left: 25px;
+  font-size: 1.2rem;
+}
+
+#flex-div div i{
+  margin: 10px 10px;
+  color: #1976d2;
+}
+
+#flex-div div {
+  margin-right: 10px;
+}
+
+.footer-ordering {
+  position: relative;
+  height: 5rem;
+}
+
+.fa-play-circle {
+  position: absolute;
+  top: 5px;
+  right: 20%;
+  color: rgb(83, 119, 63);
+}
+
+.fa-pause-circle {
+  position: absolute;
+  top: 5px;
+  right: 10%;
+  color: #1976d2;
+}
+
+table {
+  width: 95%;
+  margin: 1rem;
+  color: #fff;
+  font-size: 1.2rem;
+}
+
+table thead th {
+  font-weight: bolder;
+  padding: 10px;
+  padding-bottom: 15px;
+}
+
+td {
+  color: #909090;;
+  padding: 10px 5px;
+}
+
+/* ------------------------------------------------------------------------------------ */
+
+
+
+
+/* ------------------------------------------------------------------------------------ */
+
+@media screen and (max-width: 760px) and (min-width: 480px) {
+  .container-wrapper{
+    margin: 0;
+    overflow: hidden;
+    padding: 2rem;
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    grid-auto-rows: minmax(20vh, auto);
+    grid-gap: 1rem;
+    grid-template-areas:
+    "column-1 column-1 column-1 column-1 column-1 column-1 column-1 column-1"
+    "createMission createMission createMission createMission missionConfigure missionConfigure missionConfigure missionConfigure"
+    "createMission createMission createMission createMission missionConfigure missionConfigure missionConfigure missionConfigure"
+    "missionOrdering missionOrdering missionOrdering missionOrdering storedMissions storedMissions storedMissions storedMissions"
+    "missionOrdering missionOrdering missionOrdering missionOrdering storedMissions storedMissions storedMissions storedMissions"
+  }
+
+  .menu-icons {
+    width: 50%;
+    display: block;
+    margin: 4rem auto;
+    margin-bottom: 15px;
+  }
+
+  .active img {
+    margin-right: 0;
+    margin: 10px;
+    position: relative;
+    top: 30%;
+    left: 30%;
+  }
+
+  .menu {
+    padding: 0;
+    margin: 0;
+    margin-top: 10px;
+  }
+
+  .menu .menu-item {
+    display: inline-block;
+    width: 15%;
+    width: 60px;
+    height: 60px;
+  }
+
+  .menu .menu-icons {
+    margin: 0;
+    position: relative;
+    top: 30%;
+    left: 30%;
+  }
+
+  .active{
+    padding: 0px;
+    margin: 0px;
+    margin-left: -20px;
+    margin-top: 10px;
+    display: inline-block;
+    background-color: rgb(30, 30, 30);
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+  }
+
+  #heading-page3 #button-heading-container {
+    margin-left: 60%;
+  }
+
+  .config-footer div {
+    margin-bottom: 1rem;
+  }
+
+  .fa-play-circle {
+    right: 30%;
+  }
+}
+
+/* ------------------------------------------------------------------------------------ */
+@media screen and (max-width: 480px) {
+  .container-wrapper {
+    margin: 0;
+    overflow: hidden;
+    padding: 2rem;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-auto-rows: minmax(25vh, auto);
+    grid-gap: 2rem;
+    grid-template-areas:
+    "column-1 column-1 column-1 column-1 column-1"
+    "createMission createMission createMission createMission createMission"
+    "createMission createMission createMission createMission createMission"
+    "createMission createMission createMission createMission createMission"
+    "missionConfigure missionConfigure missionConfigure missionConfigure missionConfigure"
+    "missionOrdering missionOrdering missionOrdering missionOrdering missionOrdering"
+    "storedMissions storedMissions storedMissions storedMissions storedMissions"
+  }
+
+  .menu {
+    padding: 0;
+    margin: 0;
+    margin-top: 10px;
+  }
+
+  .menu .menu-item {
+    display: inline-block;
+    width: 15%;
+    width: 60px;
+    height: 60px;
+  }
+
+  .menu .menu-icons {
+    margin: 0;
+    position: relative;
+    top: 30%;
+    left: 30%;
+  }
+
+  .active{
+    padding: 0px;
+    margin: 0px;
+    margin-left: -20px;
+    margin-top: 10px;
+    display: inline-block;
+    background-color: rgb(30, 30, 30);
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+  }
+
+  .menu-icons {
+    width: 50%;
+    display: block;
+    margin: 4rem auto;
+    margin-bottom: 15px;
+  }
+
+  .active img {
+    margin-right: 0;
+    margin: 10px;
+    position: relative;
+    top: 30%;
+    left: 30%;
+  }
+
+  #heading-page3 #button-heading-container {
+    margin-left: 70%;
+  }
+  .fa-play-circle {
+    right: 30%;
+  }
+}
+
+
+
+
+/* ------------------------------------------------------------------------------------ */

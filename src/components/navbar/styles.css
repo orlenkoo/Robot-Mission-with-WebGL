@@ -1,0 +1,55 @@
+.logo {
+    width: 60%;
+    cursor: pointer;
+    height: 90px
+}
+
+.logo-div {
+    background: rgb(44, 50, 54);
+    box-shadow: 0px 4px 10px 4px rgb(0, 0, 0, 0.14);
+    text-align: center;
+    vertical-align: center;
+    border-radius: 10px;
+    width: 100px;
+}
+
+.logo-div-2 {
+
+    background: rgb(44, 50, 54);
+    box-shadow: 0px 4px 10px 4px rgb(0, 0, 0, 0.14);
+    text-align: center;
+    border-radius: 10px;
+    margin-top: 30px;
+    width: 100px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.logo-div-3 {
+    background: rgb(44, 50, 54);
+    box-shadow: 0px 4px 10px 4px rgb(0, 0, 0, 0.14);
+    text-align: center;
+    border-radius: 10px;
+    height: 90px;
+    padding-top: 12px;
+    padding-left: 12px;
+}
+
+.logo-div-4 {
+    background: rgb(44, 50, 54);
+    box-shadow: 0px 4px 10px 4px rgb(0, 0, 0, 0.14);
+    text-align: center;
+    border-radius: 10px;
+    height: 110px;
+    padding-top: 12px;
+    padding-left: 12px;
+}
+
+.navBtns {
+    margin: 25px;
+}
+
+.navBtns2 {
+    margin: 5px;
+
+}

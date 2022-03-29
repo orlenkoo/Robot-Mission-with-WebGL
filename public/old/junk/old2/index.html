@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bot-Control</title>
+
+  <link rel="stylesheet" href="./css/main.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.3/css/materialize.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css" integrity="sha384-KA6wR/X5RY4zFAHpv/CnoG2UW1uogYfdnP67Uv7eULvTveboZJg0qUpmJZb5VqzN" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/14.0.3/nouislider.min.css">
+
+</head>
+<body id="scr" onload="init();">
+  <div class="container-wrapper">
+    
+    <div class="column1">
+      <div class="logo box-1">
+        <img src="./svg/eye-solid.svg" alt="logo">
+        <!-- <object data="./svg/eye-solid.svg" type="image/svg+xml"></object> -->
+      </div>
+      <div class="menu box-1">
+        <div class="menu-item active"><a href="/"><img src="./svg/desktop-solid.svg" alt="desktop" class="desktop menu-icons"></a></div>
+        <div class="menu-item"><a href="/page2.html"><img src="./svg/map-marked-alt-solid.svg" alt="map" class="map-icon menu-icons"></a></div>
+        <div class="menu-item"><a href="/page3.html"><img src="./svg/tasks-solid.svg" alt="tasks" class="tasks menu-icons"></a></div>
+        <div class="menu-item"><a href="/"><img src="./svg/tachometer-alt-solid (1).svg" alt="tachometer" class="tachometer menu-icons"></a></div>
+        <div class="menu-item"><a href="/"><img src="./svg/bug-solid.svg" alt="bug" class="bug menu-icons"></a></div>
+      </div>
+    </div>
+
+<!-- ========================================================================================  -->
+    <div class="column2">
+      <div class="map box-2">
+        <div class="heading">
+          <div class="heading-container">
+            <div class="logo-container"><img src="./svg/map-marker-alt-solid.svg" alt=""></div>
+            <h2 class="title-container">Map</h2>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="camera box-2"> 
+        <div class="heading">
+          <div class="heading-container">
+            <div class="logo-container"><img src="./svg/video-solid.svg" alt=""></div>
+            <h2 class="title-container">Camera</h2>
+          </div>
+        </div>
+      </div>
+
+      <div class="scan box-2">
+        <div class="heading">
+          <div class="heading-container">
+            <div class="logo-container"><img src="./svg/search-solid.svg" alt=""></div>
+            <h2 class="title-container">Scan topic</h2>
+          </div>
+        </div>
+      </div>
+    </div>
+
+<!-- ========================================================================================  -->
+
+    <div class="column3">
+      <div class="status">
+        <div class="system-status">
+          <h3>System Status</h3>
+          <h1>Moving Forward</h1>
+        </div>
+        <div class="speed">
+          <h3>Speed</h3>
+          <h1>5 m/s</h1>
+        </div>
+        <div class="distance">
+          <h3>Distance</h3>
+          <h1>400 m</h1>
+        </div>
+        <div class="system-slider">
+          <h3>Battery: 35%</h3>
+
+          <div class="progress-div">
+            <progress min="0" max="100" value="47" id="PROGRESS_PERCENT_COMPLETED">
+          </div>
+          <!-- <div id="test-slider"></div> -->
+        </div>
+      </div>
+
+      <!-- |_______________________________________________________| -->
+
+      <div class="mission">
+        <div class="current-mission">
+          <h2 class="mission-heading">Current Mission</h2>
+          <h3 class="mission-description">Mission A</h3>
+        </div>
+
+        <div class="status-mission">
+          <h2 class="mission-heading">Status</h2>
+          <h3 class="mission-description">Normal</h3>
+        </div>
+
+        <div class="current">
+          <h2 class="mission-heading">Current</h2>
+          <h3 class="mission-description">Wayform A</h3>
+        </div>
+
+        <div class="current-task">
+          <h2 class="mission-heading">Current Task</h2>
+          <h3 class="mission-description">Pickup</h3>
+        </div>
+
+        <div class="next-task">
+          <h2 class="mission-heading">Next Task</h2>
+          <h3 class="mission-description" id="last-item">Return Back</h3>
+        </div>
+
+        <div class="next half">
+          <h2 class="mission-heading">Next</h2>
+          <h3 class="mission-description">Wayform B</h3>
+        </div>
+      </div>
+
+      <!-- |_______________________________________________________| -->
+
+      <div class="joystick-actual">
+        <div class="play-pause"><i class="fas fa-play fa-3x"></i><i class="fas fa-square fa-3x"></i></div>
+
+        <div class="joystick-control">
+          <div class="noselect" >
+            <div class="container space-top">
+              <div class="center-align">
+                <canvas id="joystick" height="300" width="300"></canvas>
+              </div>
+              </div> 
+          </div>
+        </div>
+      </div>
+
+      <!-- |_______________________________________________________| -->
+
+    </div>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.3/js/materialize.js"></script>
+  <script src="https://hammerjs.github.io/dist/hammer.js"></script>
+  <script src="https://code.createjs.com/createjs-2015.11.26.combined.js"></script>
+  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/14.0.3/nouislider.min.js"></script> -->
+  <script src="./js/index.js"></script>
+  
+</body>
+</html>

@@ -1,0 +1,162 @@
+/* .container-wrapper {
+	height: 100vh;
+	margin: 0;
+	overflow: auto;
+	padding: 1.5rem 2rem;
+	display: grid;
+	grid-template-columns: 1fr 11fr;
+	grid-gap: 2rem;
+	grid-template-areas: 'column-1 column-2';
+} */
+
+.container-wrapper {
+	grid-template-areas: 'column-1 column-1 column-2 column-2 column-2 column-2 column-2 column-2 column-2 			column-2 column-2 column-2 column-2 column-2 column-2 column-2 column-2 column-2 column-2 column-2';
+}
+
+.column2 {
+	grid-template-columns: repeat(3, 1fr);
+	grid-template-rows: repeat(2, 1fr);
+	gap: 2rem;
+	grid-template-areas:
+		'data-log time create-graph'
+		'dashboard camera-data odom';
+}
+
+.data-log {
+	grid-area: data-log;
+	overflow: auto;
+}
+.time {
+	grid-area: time;
+}
+.create-graph {
+	grid-area: create-graph;
+}
+.dashboard {
+	grid-area: dashboard;
+}
+.camera-data {
+	grid-area: camera-data;
+}
+.odom {
+	grid-area: odom;
+}
+
+.checkboxes {
+	padding: 1rem;
+}
+.checkbox {
+	text-align: left;
+	margin-bottom: 1rem;
+}
+
+.checkbox label {
+	color: aliceblue;
+	font-size: 0.8rem !important;
+	padding-left: 3.5rem !important;
+}
+
+.create-graph, .camera-data, .time, .odom {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+button {
+	color: #fff;
+	background-color: rgb(44, 50, 54);
+	margin: 0;
+	border: none;
+	border-radius: 5px;
+	padding: 0.5rem 1rem;
+}
+
+i {
+	margin-right: 1rem;
+	color: #fff;
+}
+
+button i {
+	margin-right: 0.5rem;
+}
+
+.camera-data i {
+	margin: 0 0.5rem;
+}
+
+.play-icon {
+	color: #fff;
+}
+
+.footer {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin: 0 0.5rem 0.5rem;
+}
+
+.progress-div {
+	width: 230px;
+}
+
+@media only screen
+  and (max-width: 1024px)
+  and (-webkit-min-device-pixel-ratio: 1) {
+
+	.container-wrapper {
+		grid-template-areas: 'column-1 column-1' 'column-2 column-2';
+	}
+
+	.column2 {
+		grid-template-columns: 48.5% 48.5%;
+		grid-template-rows: 30% 30% 30%;
+
+		grid-template-areas: 
+			'data-log time'
+			'create-graph dashboard' 
+			'camera-data odom';
+	}
+}
+
+@media only screen 
+  and (min-device-width: 768px) 
+  and (max-device-width: 1024px)
+  and (orientation: portrait)
+  and (-webkit-min-device-pixel-ratio: 1) {
+	.column2 {
+		grid-template-columns: 48% 48%;
+		grid-template-rows: 30% 31% 31%;
+	}
+}
+
+@media screen 
+  and (max-width: 640px) {
+	.container-wrapper {
+		height: auto;
+		padding: 1rem;
+		grid-template-columns: 100%;
+		grid-template-rows: 12rem auto;
+		gap: 1rem;
+		grid-template-areas:
+			 'column-1'
+			 'column-2';
+	}
+
+	.column2 {
+		grid-template-columns: 100%;
+		grid-template-rows: repeat(6, auto);
+		grid-template-areas: 'data-log' 'time' 'create-graph' 'dashboard'	'camera-data' 'odom';
+	}
+	/* .box-2 {
+		padding-bottom: 1rem;
+	} */
+}
+
+@media screen 
+  and (max-width: 640px)
+  and (orientation: landscape) {
+	.container-wrapper {
+		grid-template-rows: 11.5rem auto;
+	}
+}
+

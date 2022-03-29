@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bot-Control</title>
+
+  <link rel="stylesheet" href="./css/main.css">
+  <link rel="stylesheet" href="./css/page3.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css" integrity="sha384-KA6wR/X5RY4zFAHpv/CnoG2UW1uogYfdnP67Uv7eULvTveboZJg0qUpmJZb5VqzN" crossorigin="anonymous">
+  <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.3/css/materialize.css"> -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/14.0.3/nouislider.min.css">
+
+</head>
+<body>
+  <div class="container-wrapper">
+    <div class="column1">
+      <div class="logo box-1">
+        <img src="./svg/eye-solid.svg" alt="logo">
+        <!-- <object data="./svg/eye-solid.svg" type="image/svg+xml"></object> -->
+      </div>
+      <div class="menu box-1">
+        <div class="menu-item"><a href="/"><img src="./svg/desktop-solid.svg" alt="desktop" class="desktop menu-icons"></a></div>
+        <div class="menu-item"><a href="/page2.html"><img src="./svg/map-marked-alt-solid.svg" alt="map" class="map-icon menu-icons"></a></div>
+        <div class="menu-item active"><a href="/page3.html"><img src="./svg/tasks-solid.svg" alt="tasks" class="tasks menu-icons"></a></div>
+        <div class="menu-item"><a href="/"><img src="./svg/tachometer-alt-solid (1).svg" alt="tachometer" class="tachometer menu-icons"></a></div>
+        <div class="menu-item"><a href="/"><img src="./svg/bug-solid.svg" alt="bug" class="bug menu-icons"></a></div>
+      </div>
+    </div>
+
+    <div class="create-mission box-2">
+      <div class="heading">
+        <div class="heading-container">
+          <h2 class="title-container">Create Mission</h2>
+        </div>
+      </div>
+
+      <div class="create-mission-form">
+        <div id="mission-name">
+          <label>Mission Name</label>
+          <input type="text">
+        </div>
+        <div id="description">
+          <label>Description</label>
+          <input type="text">
+        </div>
+        <div id="building-name">
+          <label for="cars">Building Name</label>
+          <select id="cars" name="cars">
+            <option value="volvo"></option>
+            <option value="saab">name 2</option>
+            <option value="fiat">name 3</option>
+            <option value="audi">name4</option>
+          </select>
+        </div>
+        <div id="map-name">
+          <label for="cars">Map Name</label>
+          <select id="cars" name="cars">
+            <option value="volvo"></option>
+            <option value="saab">name 2</option>
+            <option value="fiat">name 3</option>
+            <option value="audi">name4</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="heading" id="heading-page3">
+        <div class="heading-container" id="button-heading-container">
+          <h2 class="title-container">Create</h2>
+        </div>
+      </div>
+    </div>
+
+    <div class="mission-configure box-2">
+      <div class="heading">
+        <div class="heading-container">
+          <h2 class="title-container">Mission Configure</h2>
+        </div>
+      </div>
+
+      <div class="configuration scrollbar">
+        <h2>Waypoint A</h2>
+        <h2>Action A</h2>
+        <h2>Waypoint B</h2>
+        <h2>Action B</h2>
+        <h2>Transition to floor 2</h2>
+        <h2>Loop 2x</h2>
+        <h2>Transition to floor 2</h2>
+        <h2>Loop 2x</h2>
+      </div>
+
+      <div class="config-footer">
+        <h2>ADD</h2>
+        <div>
+          <button class="one">Waypoint</button>
+          <button class="two">Action</button>
+          <button class="three">Transition</button>
+          <button class="four">Loop</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="mission-ordering box-2">
+      <div class="heading">
+        <div class="heading-container">
+          <h2 class="title-container">Mission Ordering</h2>
+        </div>
+      </div>
+
+      <div class="mission-ordering">
+        <div id="flex-div"><h2>mission 1</h2><div><i class="fas fa-chevron-up fa-1x"></i><i class="fas fa-chevron-down fa-1x"></i></div></div>
+        <div id="flex-div"><h2>mission 2</h2><div><i class="fas fa-chevron-up fa-1x"></i><i class="fas fa-chevron-down fa-1x"></i></div></div>
+        <div id="flex-div"><h2>mission 3</h2><div><i class="fas fa-chevron-up fa-1x"></i><i class="fas fa-chevron-down fa-1x"></i></div></div>
+        <div id="flex-div"><h2>mission 4</h2><div><i class="fas fa-chevron-up fa-1x"></i><i class="fas fa-chevron-down fa-1x"></i></div></div>
+      </div>
+
+      <div class="footer-ordering">
+        <i class="far fa-pause-circle fa-3x"></i>
+        <i class="far fa-play-circle fa-3x"></i>
+      </div>
+    </div>
+
+    <div class="stored-missions box-2">
+      <div class="heading">
+        <div class="heading-container">
+          <h2 class="title-container">Stored Missions</h2>
+        </div>
+      </div>
+
+      <div class="body-table">
+        <table cellspacing="1" cellpadding="1">
+          <thead>
+              <tr>
+                  <th>Name</th>
+                  <th>Map</th>
+                  <th>Building</th>
+              </tr>
+          </thead>
+          <tbody>
+              <tr>
+                <td>ABC</td>
+                <td>Map B</td>
+                <td>Office</td>
+              </tr>
+              <tr>
+                <td>ABC</td>
+                <td>Map B</td>
+                <td>Office</td>
+              </tr>
+              <tr>
+                <td>ABC</td>
+                <td>Map B</td>
+                <td>Office</td>
+              </tr>
+              <tr>
+                <td>ABC</td>
+                <td>Map B</td>
+                <td>Office</td>
+              </tr>
+              <tr>
+                <td>ABC</td>
+                <td>Map B</td>
+                <td>Office</td>
+              </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+  </div>
+</body>
+</html>

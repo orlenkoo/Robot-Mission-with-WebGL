@@ -1,0 +1,57 @@
+.missionlistitem:hover {
+	background-color: #171e24;
+	color: #000;
+	cursor: pointer;
+}
+
+.imuloading{
+	height: 22px;
+}
+
+.add-config-buttons {
+	font-size: 10px;
+	font-weight: bold;
+	width: -moz-fit-content;
+}
+
+.configuration h2:hover {
+	background-color: #30485a;
+	cursor: pointer;
+}
+
+#conf-clear {
+	color: #fff; border-width: 0px; border-radius: 10px; background-color: #1c2a35;
+	cursor: pointer;
+}
+
+#conf-refresh {
+	color: #fff; border-width: 0px; border-radius: 10px; background-color: #1c2a35;
+	cursor: pointer;
+}
+
+.mission-order-buttons{
+	padding-left: 15px;
+	padding-top: 3px;
+	padding-bottom: 3px;
+	text-align: left;
+	background-color: #32404b;
+}
+
+.orderbtn{
+	font-size: 22px;
+	padding-right: 5px;
+	color: #fff;
+}
+
+.orderremove:hover {
+	color: #ff1f3c;
+}
+.orderplus:hover {
+	color: #ffdb4f;
+}
+.orderpause:hover {
+	color: #2db0ff;
+}
+.orderplay:hover {
+	color: #4fff4a;
+}

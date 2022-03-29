@@ -1,0 +1,158 @@
+.container-wrapper {
+	grid-template-areas: 'column-1 column-1 column-2 column-2 column-2 column-2 column-2 column-2 column-2 column-2 column-2 column-2 column-2 column-2 column-2 column-2 column-2 column-2 column-2 column-2';
+}
+
+.column2 {
+	grid-template-columns: repeat(9, 1fr);
+	grid-template-rows: repeat(7, 1fr);
+
+	grid-template-areas: 
+		'create create create create create create create create create'
+		'create create create create create create create create create'
+		'create create create create create create create create create'
+		'create create create create create create create create create'
+		'stored stored stored control control control control control control'
+		'stored stored stored control control control control control control'
+		'stored stored stored control control control control control control';
+}
+
+/* ---------------------------------------------------- */
+
+.create {
+	grid-area: create;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.heading {
+	display: flex;
+	justify-content: space-between;
+}
+
+.create .heading .heading-container {
+	width: 150px;
+}
+
+.create .heading button, 
+.stored .heading button {
+	color: #fff;
+	background-color: rgb(44, 50, 54);
+	margin: 0.6rem 1rem 1rem 1rem;
+	border: none;
+	border-radius: 10px;
+	padding: 0 2rem;
+}
+
+.footer {
+	text-align: left;
+	margin-bottom: 1rem;
+	margin-left: 1rem;
+}
+
+.footer button {
+	margin-right: 2rem;
+	color: #fff;
+	background-color: #53773f;
+	border: none;
+	border-radius: 10px;
+	padding: 0.5rem 1.3rem;
+	font-size: 1rem;
+	font-weight: 500;
+	letter-spacing: 1px;
+}
+
+/* ---------------------------------------------------- */
+
+.stored {
+	grid-area: stored;
+	overflow: auto;
+}
+
+.stored .heading .heading-container {
+	width: 150px;
+}
+
+.stored .heading button {
+	border-radius: 5px;
+	padding: 0.5rem 1rem;
+}
+.stored .heading button i {
+	margin-right: 0.5rem;
+}
+
+.stored .body {
+	padding: 0 2rem;
+}
+
+.stored .body table {
+	table-layout: fixed;
+	color: #fff;
+}
+
+.stored .body table thead {
+	border: none;
+}
+
+.stored th {
+	font-size: 1rem;
+	font-weight: 600;
+	letter-spacing: 1px;
+	padding: 0.6rem 0;
+}
+.stored td {
+	font-size: 0.8rem;
+	font-weight: 300;
+	padding: 0.3rem 0;
+}
+
+/* ---------------------------------------------------- */
+
+.control {
+	grid-area: control;
+	overflow: auto;
+}
+
+.control .header {
+	display: flex;
+	justify-content: space-around;
+	margin-top: 1rem;
+}
+
+.box-3 {
+	background-color: #92751c;
+	color: #fff;
+	letter-spacing: 1px;
+	padding: 1rem 4rem;
+	border-radius: 10px;
+}
+.box-3 h4 {
+	font-size: 0.7rem;
+	margin: 0 auto 0.5rem;
+}
+.box-3 h2 {
+	font-size: 1rem;
+	font-weight: 600;
+	margin: 0 auto;
+}
+
+.building h2 i {
+	margin: 0 0.2rem;
+}
+
+.building h2 .add {
+	position: relative;
+	margin-left: 0;
+}
+
+.control .body {
+	margin: 1rem 10rem 0;
+	margin-right: 14rem;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+}
+
+.joystick-actual {
+	width: 200px;
+}

@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Bot-Control</title>
+
+	<link rel="stylesheet" href="./css/main.css">
+	<link rel="stylesheet" href="./css/page2.css">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css" integrity="sha384-KA6wR/X5RY4zFAHpv/CnoG2UW1uogYfdnP67Uv7eULvTveboZJg0qUpmJZb5VqzN" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.3/css/materialize.css">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css" integrity="sha384-KA6wR/X5RY4zFAHpv/CnoG2UW1uogYfdnP67Uv7eULvTveboZJg0qUpmJZb5VqzN" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/14.0.3/nouislider.min.css">
+
+</head>
+<body onload="init();">
+	<div class="container-wrapper">
+		
+		<div class="column1">
+			<div class="logo box-1">
+				<img src="./svg/eye-solid.svg" alt="logo">
+				<!-- <object data="./svg/eye-solid.svg" type="image/svg+xml"></object> -->
+			</div>
+			<div class="menu box-1">
+				<div class="menu-item"><a href="/"><img src="./svg/desktop-solid.svg" alt="desktop" class="desktop menu-icons"></a></div>
+				<div class="menu-item active"><a href="/page2.html"><img src="./svg/map-marked-alt-solid.svg" alt="map" class="map-icon menu-icons"></a></div>
+				<div class="menu-item"><a href="/page3.html"><img src="./svg/tasks-solid.svg" alt="tasks" class="tasks menu-icons"></a></div>
+				<div class="menu-item"><a href="/"><img src="./svg/tachometer-alt-solid (1).svg" alt="tachometer" class="tachometer menu-icons"></a></div>
+				<div class="menu-item"><a href="/"><img src="./svg/bug-solid.svg" alt="bug" class="bug menu-icons"></a></div>
+			</div>
+		</div>
+
+		<div class="column2">
+
+			<div class="create box-2">
+				<div class="heading">
+				  	<div class="heading-container">
+					 	<div class="logo-container"><img src="./svg/map-marker-alt-solid.svg" alt=""></div>
+					 	<h2 class="title">Create Map</h2>
+				  	</div>
+		
+				  	<button>Save Map</button>
+				</div>
+		
+				<div class="footer">
+				  <button class="add">Add Waypoint</button>
+				  <button class="delete">Delete Waypoint</button>
+				</div>
+			</div>
+
+			<div class="stored box-2">
+				<div class="heading">
+				  	<div class="heading-container">
+					 	<h2 class="title">Stored Maps</h2>
+				  	</div>
+	 
+				  	<button><i class="fas fa-upload"></i>Import</button>
+				</div>
+	 
+				<div class="body" id="maps-table">
+				  	<table cellspacing="1" cellpadding="1">
+					 	<thead>
+						  	<tr>
+								<th>Name</th>
+								<th>Building</th>
+						  	</tr>
+					 	</thead>
+					 	<tbody>
+						  	<tr>
+							 	<td>ABC</td>
+							 	<td>Office</td>
+						  	</tr>
+						  	<tr>
+							 	<td>ABC</td>
+							 	<td>Office</td>
+						  	</tr>
+						  	<tr>
+							 	<td>ABC</td>
+							 	<td>Office</td>
+						  	</tr>
+						  	<tr>
+							 	<td>ABC</td>
+							 	<td>Office</td>
+						  	</tr>
+						  	<tr>
+							 	<td>ABC</td>
+							 	<td>Office</td>
+						  	</tr>
+					 	</tbody>
+				  	</table>
+				</div>
+			</div>
+
+			<div class="control box-2">
+				<div class="header">
+				  	<div class="floor box-3">
+					 	<h4>Map name</h4>
+					 	<h2>Floor 1</h2>
+				  	</div>
+	 
+				  	<div class="building box-3">
+					 	<h4>Building name</h4>
+					 	<h2>Hospital <i class="fas fa-chevron-down"></i> <i class="fas fa-plus-circle add"></i></h2>
+				  	</div>
+				</div>
+	 
+				<div class="body">
+				  	<div class="rewind-button">
+					 	<i class="fas fa-arrow-circle-left fa-5x"></i>
+				  	</div>
+				  
+					<div class="joystick-actual">
+						<div class="joystick-control">
+					  		<div class="noselect" >
+						 		<div class="container">
+									<div class="center-align">
+							  			<canvas id="joystick" height="300"width="300"></canvas>
+									</div>
+								</div> 
+					  		</div>
+						</div>
+					</div>
+	 
+				  	<div class="next-button">
+					 	<i class="fas fa-arrow-circle-right fa-5x"></i>
+				  	</div>
+				</div>
+			</div>
+
+		</div>
+
+	</div>
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.3/js/materialize.js"></script>
+	<script src="https://hammerjs.github.io/dist/hammer.js"></script>
+	<script src="https://code.createjs.com/createjs-2015.11.26.combined.js"></script>
+	<script src="./js/index.js"></script>
+
+</body>
+</html>

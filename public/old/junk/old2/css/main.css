@@ -1,0 +1,705 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto|Roboto+Mono&display=swap');
+
+body {
+  background-color: rgb(23, 30, 36);
+  margin: 0;
+  padding: 0;
+  height: 95vh;
+  font-family: 'Roboto', sans-serif;
+}
+
+.container-wrapper{
+  margin: 0;
+  overflow: hidden;
+  padding: 2rem;
+  display: grid;
+  grid-template-columns: repeat(16, 1fr);
+  grid-auto-rows: minmax(100vh, auto);
+  grid-gap: 2rem;
+  grid-template-areas:
+  "column-1 column-1 column-2 column-2 column-2 column-2 column-2 column-2 column-2 column-2 column-2 column-2 column-3 column-3 column-3 column-3"
+}
+
+.column1{
+  grid-area: column-1;
+}
+
+.column2{
+  grid-area: column-2;
+}
+
+.column3{
+  grid-area: column-3;
+}
+
+/* ======================================================================================== */
+
+.box-1{
+  background: rgb(44, 50, 54);
+  box-shadow: 0px 4px 10px 4px rgb(0,0,0,0.14);
+  text-align: center;
+  border-radius: 10px;
+}
+
+.box-2{
+  background: rgb(28, 42, 53);
+  box-shadow: 0px 4px 10px 4px rgb(0,0,0,0.14);
+  text-align: center;
+  border-radius: 10px;
+}
+
+/* ======================================================================================== */
+
+.column1 .logo img {
+  width: 65%;
+  height: 6.7rem;
+  /* height: 17vh; */
+}
+
+.column1 .logo {
+  text-align: center;
+}
+
+ .logo img:hover{
+  cursor: pointer;
+}
+
+/* ======================================================================================== */
+
+.menu-icons {
+  width: 32%;
+  /* height: ; */
+  display: block;
+  margin: 4rem auto;
+}
+
+.menu-icons:hover{
+  cursor: pointer;
+}
+
+.menu {
+  text-align: center;
+  /* height: 80vh; */
+  padding: 5rem 0;
+  margin: 2rem auto;
+}
+
+.active{
+  padding: 0;
+  margin: 0;
+  display: inline-block;
+  background-color: rgb(30, 30, 30);
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  /* margin-top: 2rem; */
+  padding: auto auto;
+}
+
+.active .menu-icons {
+  width: 40%;
+  margin: 1.75rem auto;
+}
+
+.active .menu-icons:hover{
+  cursor: pointer;
+}
+
+.desktop{
+  fill: rgb(76, 175, 80);
+}
+
+/* ======================================================================================== */
+
+.column2 {
+  margin: 0;
+  overflow: hidden;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-auto-rows: minmax(60px, auto);
+  grid-gap: 2rem;
+  grid-template-areas:
+  "map map map map map"
+  "camera camera camera scan scan"
+}
+
+.map {
+  grid-area: map;
+}
+
+.camera {
+  grid-area: camera;
+}
+
+.scan {
+  grid-area: scan;
+}
+
+/* ======================================================================================== */
+
+.column3 .status{
+  display: block;
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
+  background-color: rgb(28, 42, 53);
+  height: 18rem;
+}
+
+.column3 .mission {
+  display: block;
+  background-color: rgb(24, 33, 41);
+  height: 25rem;
+}
+
+.column3 .joystick-actual {
+  display: block;
+  border-bottom-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+  background-color: rgb(28, 42, 53);
+  height: 20rem;
+}
+
+/* ======================================================================================== */
+
+ .heading div img {
+  width: 30px;
+  height: 30px;
+  margin: 7px 7px;
+}
+
+ .heading div div {
+  border-radius: 50%;
+  display: inline-block;
+  width: 45px;
+  height: 45px;
+  margin: 8px;
+}
+
+ .heading h2 {
+  display: inline-block;
+  margin: 5px;
+}
+
+ .heading div {
+  display: inline-block;
+  background-color: rgb(78, 88, 96);
+  border-radius: 30px;
+  width: auto;
+  height: 4rem;
+  margin: 20px 20px;
+
+}
+
+ .heading {
+  text-align: left;
+}
+
+.map .heading div div {
+  background-color: rgb(255, 120, 0);
+}
+
+.camera .heading div div {
+  background-color: rgb(2, 188, 212);
+}
+
+.scan .heading div div {
+  background-color: rgb(139, 195, 75);
+}
+
+
+.title-container {
+  color: #fff;
+  position: relative;
+  top: -13px;
+  left: -5px;
+  font-size: 1.5rem;
+}
+
+/* ======================================================================================== */
+
+
+
+.status {
+  position: relative;
+}
+
+.system-status {
+  position: absolute;
+  background-color: #ff7800;
+  color: #fff;
+  border-radius: 10px;
+  height: 27%;
+  width: 86%;
+
+  top: 5%;
+  left: 7%;
+}
+
+.speed {
+  position: absolute;
+  background-color: #8bc34b;
+  color: #fff;
+  border-radius: 10px;
+  width: 40%;
+  height: 35%;
+
+  top: 38%;
+  left: 7%;
+}
+
+.distance {
+  position: absolute;
+  background-color: #8bc34b;
+  color: #fff;
+  border-radius: 10px;
+  width: 40%;
+  height: 35%;
+
+  top: 38%;
+  left: 53%;
+}
+
+.system-slider {
+  position: absolute;
+  height: 18%;
+  width: 86%;
+  top: 77%;
+  left: 7%;
+}
+
+.system-status h3, .speed h3, .distance h3 {
+  margin: 0 1.5rem;
+  padding: 0;
+  font-size: 15px;
+}
+
+.system-status h1, .speed h1, .distance h1 {
+  margin: 0 1.5rem;
+  padding: 0;
+  font-size: 25px;
+  font-weight: bolder;
+}
+
+.system-status h3 {
+  margin-top: 0.8rem;
+  margin-right: 0.5rem;
+}
+
+.system-status h1 {
+  margin-top: 0.5rem;
+  margin-right: 0.5rem;
+}
+
+.speed h3, .distance h3 {
+  margin-top: 1.3rem;
+  text-align: center;
+}
+
+.speed h1, .distance h1 {
+  margin-top: 0.8rem;
+  text-align: center;
+}
+
+
+
+
+progress {
+  border: none;
+  width: 100%;
+  height: 10px;
+  background: white;
+
+}
+
+progress {
+  color: white;
+  border-radius: 5px;
+
+}
+
+progress::-webkit-progress-value {
+  background: #14BAC0;
+  /*border-radius: 5px;*/
+}
+
+progress::-moz-progress-bar {
+  background: white;
+}
+
+.progress-div{
+    padding: 0rem 0.8rem 0rem 0rem;
+}
+
+.system-slider h3 {
+  margin: 0;
+  margin-bottom: 3px;
+  font-size: 15px;
+  color: #fff;
+  text-align: right;
+  padding-right: 10px;
+}
+
+/* ======================================================================================== */
+
+
+/* ======================================================================================== */
+
+.current-mission h2 {
+  margin-top: 0;
+  padding-top: 10px;
+}
+
+.mission div h2{
+  font-size: 20px;
+  color: #fff;
+}
+
+.mission div h3 {
+  font-size: 17px;
+  color: rgb(83, 142, 177);
+}
+
+.mission-heading {
+  margin-bottom: 0;
+  margin-left: 20px;
+}
+
+.mission-description {
+  margin-top: 2px;
+  margin-bottom: 0;
+  margin-left: 20px;
+}
+
+.half {
+  display: block;
+  position: relative;
+  top: -205px;
+  left: 170px;
+}
+
+
+/* ======================================================================================== */
+
+
+/* ======================================================================================== */
+
+.play-pause {
+  margin: 10px;
+  padding: 20px;
+}
+
+.fa-play {
+  color: #4caf50;
+  margin-left: 10px;
+  margin-right: 30px;
+}
+
+.fa-square {
+  color: #f44436;
+  margin-left: 120px;
+}
+
+
+
+.joystick-control {
+  width: 93%;
+  height: 60%;
+  margin: 10px;  
+}
+
+.space-top {
+  padding-top: 10px;
+}
+
+#joystick {
+  height: 160px;
+  width: 160px;
+  border-radius: 300px;
+  -moz-border-radius: 300px;
+  -webkit-border-radius: 300px;
+  text-align: center;
+  background-color: rgb(73, 65, 42);
+  font: 24px/300px Helvetica, Arial, sans-serif;
+  cursor: all-scroll;
+  user-select: none;
+  z-index: -100;
+}
+
+.noselect {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+
+/* ======================================================================================== */
+
+
+
+/* ======================================================================================== */
+
+@media screen and (max-width: 760px) and (min-width: 420px){
+  .container-wrapper{
+    margin: 0;
+    overflow: hidden;
+    padding: 2rem;
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    grid-auto-rows: minmax(40px, auto);
+    grid-gap: 1rem;
+    grid-template-areas:
+    "column-1 column-1 column-1 column-1 column-1 column-1 column-1 column-1"
+    "column-2 column-2 column-2 column-2 column-2 column-3 column-3 column-3"
+  }
+
+  .column2 {
+    margin: 0;
+    overflow: hidden;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: minmax(60px, auto);
+    grid-gap: 1rem;
+    grid-template-areas:
+    "map map map"
+    "camera camera camera"
+    "scan scan scan"
+  }
+
+  #joystick {
+    height: 100px;
+    width: 100px;
+    border-radius: 300px;
+    -moz-border-radius: 300px;
+    -webkit-border-radius: 300px;
+    text-align: center;
+    background-color: rgb(73, 65, 42);
+    font: 24px/300px Helvetica, Arial, sans-serif;
+    cursor: all-scroll;
+    user-select: none;
+    z-index: -100;
+  }
+
+  .fa-square {
+    color: #f44436;
+    margin-left: 60px;
+  }
+
+  .fa-play {
+    color: #4caf50;
+    margin-left: 30px;
+    margin-right: 10px;
+  }
+
+  .play-pause {
+    margin: 0px;
+    padding-top: 20px;
+    padding-top: 30px;
+  }
+
+
+
+  .menu-icons {
+    width: 50%;
+    display: block;
+    margin: 4rem auto;
+    margin-bottom: 15px;
+  }
+
+  .active img {
+    margin-right: 0;
+    margin: 10px;
+    position: relative;
+    top: 30%;
+    left: 30%;
+  }
+
+  .menu {
+    padding: 0;
+    margin: 0;
+    margin-top: 10px;
+  }
+
+  .menu .menu-item {
+    display: inline-block;
+    width: 15%;
+    width: 60px;
+    height: 60px;
+  }
+
+  .menu .menu-icons {
+    margin: 0;
+    position: relative;
+    top: 30%;
+    left: 30%;
+  }
+
+  .active{
+    padding: 0px;
+    margin: 0px;
+    margin-left: -20px;
+    margin-top: 10px;
+    display: inline-block;
+    background-color: rgb(30, 30, 30);
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+  }
+
+  .half {
+    display: block;
+    position: relative;
+    top: -167px;
+    left: 130px;
+  }
+  
+  .mission div h2{
+    font-size: 15px;
+    color: #fff;
+  }
+  
+  .mission div h3 {
+    font-size: 12px;
+    color: rgb(83, 142, 177);
+  }
+
+  .column3 .mission {
+    height: 20rem;
+  }
+
+  .system-status h1, .speed h1, .distance h1 {
+    font-size: 20px;
+    margin-left: 17px;
+  }
+}
+
+/* ======================================================================================== */
+
+
+/* ======================================================================================== */
+
+@media screen and (max-width: 480px) {
+  .container-wrapper {
+    margin: 0;
+    overflow: hidden;
+    padding: 2rem;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-auto-rows: minmax(40px, auto);
+    grid-gap: 2rem;
+    grid-template-areas:
+    "column-1 column-1 column-1 column-1 column-1"
+    "column-2 column-2 column-2 column-2 column-2"
+    "column-3 column-3 column-3 column-3 column-3"
+    /* "column-1 column-1 column-2 column-2 column-2 column-2 column-2 column-2 column-2 column-2" 
+    ". . column-3 column-3 column-3 column-3 column-3 column-3 column-3 column-3" */
+  }
+
+  .column2 {
+    margin: 0;
+    overflow: hidden;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: minmax(60px, auto);
+    grid-gap: 1rem;
+    grid-template-areas:
+    "map map map"
+    "camera camera camera"
+    "scan scan scan"
+  }
+
+  .fa-square {
+    color: #f44436;
+    position: absolute;
+    top: 30px;
+    right: 60px;
+  }
+
+  .fa-play {
+    color: #4caf50;
+    position: absolute;
+    top: 30px;
+    left: 60px;
+  }
+
+  .play-pause {
+    margin: 0px;
+    margin-bottom: 20px;
+    padding: 10px;
+    position: relative;
+  }
+
+  #joystick {
+    height: 140px;
+    width: 140px;
+    border-radius: 300px;
+    -moz-border-radius: 300px;
+    -webkit-border-radius: 300px;
+    text-align: center;
+    background-color: rgb(73, 65, 42);
+    font: 24px/300px Helvetica, Arial, sans-serif;
+    cursor: all-scroll;
+    user-select: none;
+    z-index: -100;
+  }
+
+  .space-top {
+    padding-top: 40px;
+  }
+
+  .menu {
+    padding: 0;
+    margin: 0;
+    margin-top: 10px;
+  }
+
+  .menu .menu-item {
+    display: inline-block;
+    width: 15%;
+    width: 60px;
+    height: 60px;
+  }
+
+  .menu .menu-icons {
+    margin: 0;
+    position: relative;
+    top: 30%;
+    left: 30%;
+  }
+
+  .active{
+    padding: 0px;
+    margin: 0px;
+    margin-left: -20px;
+    margin-top: 10px;
+    display: inline-block;
+    background-color: rgb(30, 30, 30);
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+  }
+
+  .column2 .map, .column2 .camera, .column2 .scan {
+    height: 30rem;
+  }
+
+  .menu-icons {
+    width: 50%;
+    display: block;
+    margin: 4rem auto;
+    margin-bottom: 15px;
+  }
+
+  .active img {
+    margin-right: 0;
+    margin: 10px;
+    position: relative;
+    top: 30%;
+    left: 30%;
+  }
+}

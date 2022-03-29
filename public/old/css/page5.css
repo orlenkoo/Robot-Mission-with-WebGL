@@ -1,0 +1,119 @@
+.container-wrapper {
+	grid-template-areas: 'column-1 column-1 column-2 column-2 column-2 column-2 column-2 column-2 column-2 column-2 column-2 column-2 column-2 column-2 column-2 column-2 column-2 column-2 column-2 column-2';
+}
+
+.column2 {
+	grid-template-columns: 2fr 3fr 3fr;
+	grid-template-rows: 3fr 4fr;
+	gap: 1rem 2rem;
+	grid-template-areas: 
+		'nodes cpu memory'
+		'nodes comp-missions dist-trav';
+}
+
+.nodes {
+	grid-area: nodes;
+}
+.cpu-usage {
+	grid-area: cpu;
+}
+.memory-usage {
+	grid-area: memory;
+}
+.completed-missions {
+	grid-area: comp-missions;
+}
+.distance-travelled {
+	grid-area: dist-trav;
+}
+
+.cpu-usage.box-2, .memory-usage.box-2 {
+	background-color: rgb(50, 21, 64);
+}
+
+.nodes .nodes-list {
+	margin: 3rem 0.6rem 0
+}
+.node {
+	border-radius: 50px;
+	padding: 0.5em 0;
+	margin-bottom: 1.5rem;
+	background-color: rgb(51, 61, 69);
+}
+.node h2 {
+	font-size: 1rem;
+	color: #fff;
+	margin: 0;
+}
+
+.chart-container {
+	z-index: 100;
+}
+
+@media only screen
+  and (max-width: 1024px)
+  and (-webkit-min-device-pixel-ratio: 1) {
+	.container-wrapper {
+		padding: 2rem 1rem;
+		grid-template-columns: 68.5% 30%;
+		grid-template-rows: 10% 89%;
+		gap: 1rem;
+		grid-template-areas:
+			 'column-1 column-1'
+			 'column-2 column-2';
+	}
+
+	.column2 {
+		grid-template-columns: 2fr 3fr 3fr;
+		grid-template-rows: 3fr 4fr;
+		gap: 1rem 2rem;
+		grid-template-areas: 
+			'nodes cpu memory'
+			'nodes comp-missions dist-trav';
+	}
+}
+
+@media only screen 
+  and (min-device-width: 768px) 
+  and (max-device-width: 1024px)
+  and (orientation: portrait)
+  and (-webkit-min-device-pixel-ratio: 1) {
+	.column2 {
+		grid-template-columns: 3fr 4fr;
+		grid-template-rows: repeat(4, auto);
+		grid-template-areas: 'nodes cpu' 'nodes memory' 'nodes comp-missions' 'nodes dist-trav';
+	}
+}
+
+@media screen 
+  and (max-width: 640px) {
+	.container-wrapper {
+		height: auto;
+		padding: 1rem;
+		grid-template-columns: 100%;
+		grid-template-rows: 12rem auto;
+		gap: 1rem;
+		grid-template-areas:
+			 'column-1'
+			 'column-2';
+	}
+
+	.column2 {
+		grid-template-columns: 100%;
+		grid-template-rows: repeat(5, auto);
+		grid-template-areas: 'nodes' 'cpu' 'memory' 'comp-missions' 'dist-trav';
+	}
+	/* .box-2 {
+		padding-bottom: 1rem;
+	} */
+}
+
+@media screen 
+  and (max-width: 640px)
+  and (orientation: landscape) {
+	.column2 {
+		grid-template-columns: 3fr 4fr;
+		grid-template-rows: repeat(4, auto);
+		grid-template-areas: 'nodes cpu' 'nodes memory' 'nodes comp-missions' 'nodes dist-trav';
+	}
+}

@@ -1,0 +1,7 @@
+{
+    "initRobot":    "mkdir initRobot",
+    "checkStatus":  "mkdir checkStatus",
+    "start":    "mkdir start",
+    "stop":     "mkdir stop",
+    "kill":     "mkdir kill"
+}

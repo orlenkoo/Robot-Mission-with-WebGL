@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Bot-Control</title>
+
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.3/css/materialize.css">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css" integrity="sha384-KA6wR/X5RY4zFAHpv/CnoG2UW1uogYfdnP67Uv7eULvTveboZJg0qUpmJZb5VqzN" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/14.0.3/nouislider.min.css">
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js"></script>
+
+	<style>
+		canvas{
+			-moz-user-select: none;
+			-webkit-user-select: none;
+			-ms-user-select: none;
+		}
+
+	</style>
+
+	<link rel="stylesheet" href="./css/main.css">
+	<link rel="stylesheet" href="./css/page5.css">
+
+</head>
+<body>
+	<div class="container-wrapper">
+		
+		<div class="column1">
+			<div class="logo box-1">
+				<img src="./svg/eye-solid.svg" alt="logo">
+				<!-- <object data="./svg/eye-solid.svg" type="image/svg+xml"></object> -->
+			</div>
+			<div class="menu box-1">
+				<div class="menu-item"><a href="/"><img src="./svg/desktop-solid.svg" alt="desktop" class="desktop menu-icons"></a></div>
+				<div class="menu-item"><a href="/page2.html"><img src="./svg/map-marked-alt-solid.svg" alt="map" class="map-icon menu-icons"></a></div>
+				<div class="menu-item"><a href="/page3.html"><img src="./svg/tasks-solid.svg" alt="tasks" class="tasks menu-icons"></a></div>
+				<div class="menu-item"><a href="/page4.html"><img src="./svg/tachometer-alt-solid (1).svg" alt="tachometer" class="tachometer menu-icons"></a></div>
+				<div class="menu-item active"><a href="/page5.html"><img src="./svg/bug-solid.svg" alt="bug" class="bug menu-icons"></a></div>
+			</div>
+		</div>
+<!-- ==========================================================================================  -->
+		<div class="column2">
+			<div class="nodes box-2">
+				<div class="heading-container no-icon">
+					<h2 class="title">Running Nodes</h2>
+				</div>
+
+				<div class="nodes-list">
+					<div class="node">
+						<h2 class="list-item">Node 1</h2>
+					</div>
+					<div class="node">
+						<h2 class="list-item">Node 2</h2>
+					</div>
+					<div class="node">
+						<h2 class="list-item">Node 3</h2>
+					</div>
+					<div class="node">
+						<h2 class="list-item">Node 4</h2>
+					</div>
+					<div class="node">
+						<h2 class="list-item">Node 5</h2>
+					</div>
+					<div class="node">
+						<h2 class="list-item">Node 6</h2>
+					</div>
+				</div>
+			</div>
+
+			<div class="cpu-usage box-2"> 
+				<div class="heading-container no-icon">
+					<h2 class="title">CPU usage</h2>
+				</div>
+				
+				<div class="chart-container">
+					<canvas id="cpu-chart"></canvas>
+				</div>
+			</div>
+
+			<div class="memory-usage box-2">
+				<div class="heading-container no-icon">
+					<h2 class="title">Memory Usage</h2>
+				</div>
+
+				<div class="chart-container">
+					<canvas id="memory-chart"></canvas>
+				</div>
+			</div>
+
+			<div class="completed-missions box-2">
+				<div class="heading-container no-icon">
+					<h2 class="title">Daily Completed Missions</h2>
+				</div>
+			</div>
+
+			<div class="distance-travelled box-2"> 
+				<div class="heading-container no-icon">
+					<h2 class="title">Daily Distance Travelled</h2>
+				</div>
+			</div>
+		</div>
+
+	</div>
+
+	<script>
+		let cpu = document.getElementById('cpu-chart').getContext('2d');
+
+		let CpuConfig = {
+			type: 'line',
+			data: {
+				labels:['B', 'W', 'S', 'L', 'C', 'N'],
+				datasets:[{
+					label: 'speed',
+					fill: false,
+					backgroundColor: 'rgb(139, 0, 0)',
+					borderColor: 'rgb(139, 0, 0)',
+					data: [80, 100, 70, 80, 120, 80]
+				}]
+			},
+			options: {
+				responsive: true,
+				layout: {
+					padding: {
+						left: 20,
+						right: 20,
+						top: 10,
+						bottom: 50
+					}
+				},
+				legend: {
+					display: false
+				},
+				tooltips: {
+					mode: 'index',
+					intersect: false,
+				},
+				hover: {
+					mode: 'nearest',
+					intersect: true
+				},
+				scales: {
+					xAxes: [{
+						display: false
+					}],
+					yAxes: [{
+						ticks: {
+							stepSize: 10
+						}
+					}]
+				}
+			}
+		};
+
+		let cpuChart = new Chart(cpu, CpuConfig);
+	</script>
+
+	<script>
+		let memory = document.getElementById('memory-chart').getContext('2d');
+
+		let MemoryConfig = {
+			type: 'line',
+			data: {
+				labels:['B', 'W', 'S', 'L', 'C', 'N'],
+				datasets:[{
+					label: 'disk space',
+					fill: false,
+					backgroundColor: 'rgb(135, 206, 235)',
+					borderColor: 'rgb(135, 206, 235)',
+					data: [80, 100, 70, 80, 120, 80]
+				}]
+			},
+			options: {
+				responsive: true,
+				layout: {
+					padding: {
+						left: 20,
+						right: 20,
+						top: 10,
+						bottom: 50
+					}
+				},
+				legend: {
+					display: false
+				},
+				tooltips: {
+					mode: 'index',
+					intersect: false,
+				},
+				hover: {
+					mode: 'nearest',
+					intersect: true
+				},
+				scales: {
+					xAxes: [{
+						display: false
+					}],
+					yAxes: [{
+						ticks: {
+							stepSize: 10
+						}
+					}]
+				}
+			}
+		};
+
+		let MemoryChart = new Chart(memory, MemoryConfig);
+	</script>
+</body>
+</html>

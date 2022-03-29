@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+
+    <script src="./js/three.min.js"></script>
+    <script src="./js/eventemitter2.min.js"></script>
+    <script src="./js/roslib.min.js"></script>
+    <script src="./js/ros3d.min.js"></script>
+
+    <script type="text/javascript" type="text/javascript">
+
+        function init() {
+            // Connect to ROS.
+            var ros = new ROSLIB.Ros({
+                url : 'ws://localhost:9090'
+            });
+
+            // Create the main viewer.
+            var viewer = new ROS3D.Viewer({
+                divID : 'map',
+                width : 800,
+                height : 600,
+                antialias : true
+            });
+
+            // Setup the map client.
+            var gridClient = new ROS3D.OccupancyGridClient({
+                ros : ros,
+                rootObject : viewer.scene,
+                continuous: true
+            });
+
+            var grid = new ROS3D.Grid({
+                color: "#2fff00"
+            });
+
+            // Create a TF client that subscribes to the fixed frame.
+            var tfClient = new ROSLIB.TFClient({
+                ros : ros,
+                fixedFrame : '/my_frame',
+                angularThres : 0.01,
+                transThres : 0.01,
+
+            });
+
+            var odom = new ROS3D.Odometry({
+                ros : ros,
+                topic: "/odom_raw",
+                tfClient: tfClient,
+                rootObject : viewer.scene
+            });
+
+            viewer.addObject(grid);
+        }
+    </script>
+</head>
+
+<body onload="init()">
+<div id="map"></div>
+</body>
+</html>

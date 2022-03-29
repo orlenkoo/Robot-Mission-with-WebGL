@@ -1,0 +1,285 @@
+.container-wrapper {
+	grid-template-areas: 'column-1 column-1 column-2 column-2 column-2 column-2 column-2 column-2 column-2 column-2 column-2 column-2 column-2 column-2 column-2 column-2 column-2 column-2 column-2 column-2';
+}
+
+.column2 {
+	grid-template-columns: repeat(2, 1fr);
+	grid-template-rows: 4fr 3fr;
+	gap: 1rem 2rem;
+	grid-template-areas:
+		'create configure'
+		'order stored';
+}
+
+.create-mission {
+	grid-area: create;
+	overflow: auto;
+}
+
+.mission-configure {
+	grid-area: configure;
+	overflow: auto;
+}
+
+.mission-ordering {
+	grid-area: order;
+	overflow: auto;
+}
+
+.stored-missions {
+	grid-area: stored;
+}
+
+.mission-configure .configuration {
+	text-align: left;
+	margin: 1rem;
+	margin-right: 0;
+	margin-bottom: 0.5rem;
+	height: 55%;
+	overflow: auto;
+}
+
+.mission-configure .configuration h2 {
+	width: 90%;
+	margin: 0.7rem 1rem;
+	padding-left: 1rem;
+	font-size: 0.9rem;
+	color: #eee;
+	font-weight: 400;
+	border: 1px solid #eee;
+	border-radius: 5px;
+}
+
+.config-footer {
+	border-top: 2px solid #fff;
+	margin: 0 1rem;
+}
+
+.config-footer h2 {
+	margin: 0.5rem 1rem;
+	text-align: left;
+	font-size: 1.2rem;
+	color: #fff;
+}
+
+.config-footer .config-buttons {
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+}
+
+.config-footer .config-buttons button {
+	background-color: rgb(76, 86, 95);
+	padding: 0.5rem 1rem;
+	border: none;
+	border-radius: 20px;
+	color: #eee;
+	cursor: pointer;
+}
+
+/* ---------------------------------------------------- */
+
+.create-mission .create-mission-form {
+	height: 70%;
+	display:  flex;
+	flex-direction: column;
+	justify-content: space-evenly;
+	align-items: center;
+}
+
+.create-mission-form div {
+	width: 80%;
+	margin: 0 1rem 0.6rem;
+	text-align: left;
+}
+
+.create-mission-form label {
+	color: #fff;
+	font-size: 0.7rem;
+	margin-top: 0.4rem;
+	margin-bottom: 0.2rem;
+	width: auto;
+}
+
+.create-mission-form input, .create-mission-form select {
+	width: 100%;
+	display: block;
+	margin-top: 0.2rem;
+	height: 1.3rem;
+	background: none;
+	border-radius: 5px;
+	border: 1px solid #fff;
+	color: #fff;
+}
+
+.create-mission-form select {
+	-webkit-appearance: menulist-button;
+}
+
+.create-mission-form select option {
+	color: #000;
+	font: inherit;
+}
+
+.create-mission .submit-button {
+	padding: 0 2rem;
+	display: flex;
+	justify-content: flex-end;
+}
+
+.create-mission .submit-button button {
+	background-color: rgb(76, 86, 95);
+	padding: 0.5rem 1rem;
+	border: none;
+	border-radius: 20px;
+	color: #eee;
+	cursor: pointer;
+}
+
+/* ---------------------------------------------------- */
+
+.mission-ordering {
+	overflow: auto;
+}
+
+.mission-ordering i {
+	cursor: pointer;
+}
+
+.mission-ordering .missions-list #flex-div {
+	margin: 0.6rem 2rem;
+	padding: 0.1rem 1rem;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	border-radius: 10px;
+	background-color: #fff;
+}
+
+.mission-ordering .missions-list #flex-div h2 {
+	margin: 0;
+	font-size: 0.7rem;
+}
+
+.missions-list i {
+	margin: 0 0.3rem;
+	color: #1976d2;
+}
+
+.mission-ordering .footer-ordering {
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+	margin: 0 2rem;
+	padding: 0.5rem 0;
+}
+
+.mission-ordering .footer-ordering i {
+	margin: 0 0.3rem;
+}
+
+.footer-ordering i:first-child {
+	color: rgb(83, 119, 63);
+}
+.footer-ordering i:last-child {
+	color: #1976d2;
+}
+
+/* ---------------------------------------------------- */
+
+.stored-missions .body {
+	padding: 0 2rem;
+	height: 72%;
+	overflow: auto;
+}
+
+.stored-missions .body table {
+	table-layout: fixed;
+	color: #fff;
+	width: 100%;
+}
+
+.stored-missions .body table thead {
+	border: none;
+}
+
+.stored-missions th {
+	font-size: 1rem;
+	font-weight: 600;
+	letter-spacing: 1px;
+	padding: 0.6rem 0;
+}
+.stored-missions td {
+	font-size: 0.8rem;
+	font-weight: 300;
+	padding: 0.4rem 0;
+	color: #909090;
+}
+
+@media only screen
+  and (max-width: 1024px)
+  and (-webkit-min-device-pixel-ratio: 1) {
+
+	.container-wrapper {
+		grid-template-areas: 'column-1 column-1' 'column-2 column-2';
+	}
+
+	.column2 {
+		grid-template-columns: 47.7% 47.7%;
+		grid-template-rows: 58% 39%;
+
+		grid-template-areas: 
+			'create configure'
+			'order stored';
+	}
+
+	.create-mission-form label {
+		font-size: 1rem;
+	}
+
+	.create-mission .submit-button button {
+		font-size: 1rem;
+		padding: 0.5rem 2rem;
+	}
+}
+
+@media only screen 
+  and (min-device-width: 768px) 
+  and (max-device-width: 1024px)
+  and (orientation: portrait)
+  and (-webkit-min-device-pixel-ratio: 1) {
+	.column2 {
+   	grid-template-rows: 60% 38%;
+	}
+}
+
+@media screen 
+  and (max-width: 640px) {
+	.container-wrapper {
+		height: auto;
+		padding: 1rem;
+		grid-template-columns: 100%;
+		grid-template-rows: 11rem auto;
+		gap: 1rem;
+		grid-template-areas:
+			 'column-1'
+			 'column-2';
+	}
+
+	.column2 {
+		grid-template-columns: 100%;
+		grid-template-rows: repeat(4, auto);
+		grid-template-areas: 'create' 'configure' 'order' 'stored';
+	}
+	.box-2 {
+		padding-bottom: 1rem;
+	}
+}
+
+@media screen 
+  and (max-width: 640px)
+  and (orientation: landscape) {
+	.container-wrapper {
+		grid-template-rows: 10.5rem auto;
+	}
+}
